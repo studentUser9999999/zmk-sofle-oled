@@ -126,6 +126,16 @@
             #binding-cells = <0>;
             bindings = <&kp ESC &kp COLON &kp Q &kp RET>;
         };
+        aa_macro: aa_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>; // This is the [ key, which is Å in NO layout
+        };
+        oo_macro: oo_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>; // This is the ; key, which is Ø in NO layout
+        };
     };
 
     combos {
@@ -133,6 +143,19 @@
         combo_softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
+        };
+        // A + R = å
+        combo_aa {
+            timeout-ms = <50>;
+            key-positions = <27 28>; // Adjust these to match your physical A and R positions
+            bindings = <&aa_macro>;
+        };
+
+        // I + O = ø
+        combo_oo {
+            timeout-ms = <50>;
+            key-positions = <36 37>; // Adjust these to match your physical I and O positions
+            bindings = <&oo_macro>;
         };
     };
 
@@ -142,16 +165,42 @@
         layer0 {
             display-name = "COLEMAK";
             bindings = <
-&td_esc_vim      &kp N1          &kp N2          &kp N3          &kp N4           &kp N5    &kp UP_ARROW    &kp N6     &kp N7           &kp N8          &kp N9          &kp N0          &kp ESCAPE
-&kp GRAVE        &kp Q           &kp W           &kp F           &kp P            &kp B     &kp DOWN_ARROW  &kp J      &kp L            &kp U           &kp Y           &kp SEMICOLON   &kp MINUS
-&kp LEFT_SHIFT   &hrm LGUI A     &hrm LALT R     &hrm LCTRL S    &hrm LSHIFT T    &kp G     &kp LEFT_ARROW  &kp M      &hrm RSHIFT N    &hrm RCTRL E    &hrm RALT I     &hrm RGUI O     &kp APOS
-&kp LCTRL        &kp Z           &kp X           &kp C           &kp D            &kp V     &kp RIGHT_ARROW &kp K      &kp H            &kp COMMA       &kp DOT         &kp FSLH        &kp BACKSLASH
-&kp C_MUTE       &kp LEFT_ALT    &kp LEFT_GUI    &mo 3           &lt 1 SPACE      &kp TAB   &kp ENTER       &kp RETURN &lt 2 BSPC       &trans          &trans          &trans
+&kp ESC          &kp N1          &kp N2          &kp N3          &kp N4           &kp N5    &kp UP_ARROW    &kp N6       &kp N7           &kp N8          &kp N9          &kp N0          &kp ESCAPE
+&kp GRAVE        &kp Q           &kp W           &kp F           &kp P            &kp B     &kp DOWN_ARROW  &kp J        &kp L            &kp U           &kp Y           &kp SEMICOLON   &kp MINUS
+&kp LEFT_SHIFT   &hrm LGUI A     &hrm LALT R     &hrm LCTRL S    &hrm LSHIFT T    &kp G     &kp LEFT_ARROW  &kp M        &hrm RSHIFT N    &hrm RCTRL E    &hrm RALT I     &hrm RGUI O     &kp APOS
+&kp LCTRL        &kp Z           &kp X           &kp C           &kp D            &kp V     &kp RIGHT_ARROW &kp K        &kp H            &kp COMMA       &kp DOT         &kp FSLH        &kp BACKSLASH
+&kp C_MUTE       &kp LEFT_ALT    &kp LEFT_GUI    &td_esc_vim     &lt 2 SPACE      &lt 3 TAB &kp ENTER       &lt 4 RETURN &lt 1 BSPC       &caps_word      &trans          &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
+
         layer_1 {
+            display-name = "SYM_LEFT";
+            bindings = <
+&trans  &trans    &trans    &trans    &trans    &trans       &mmv MOVE_UP     &trans     &trans    &trans    &trans    &trans    &trans
+&trans  &kp EXCL  &kp QMARK &td_lbrc  &kp RBRC  &kp PLUS     &mmv MOVE_DOWN   &kp DLLR   &kp GRAVE &kp PRCNT &kp POUND &kp CARET &trans
+&trans  &td_lt    &td_gt    &td_lpar  &kp RPAR  &kp MINUS    &mmv MOVE_LEFT   &kp EQUAL  &kp APOS  &kp AMPS  &kp AT    &kp COLON &trans
+&trans  &kp BSLH  &kp FSLH  &td_lbkt  &kp RBKT  &kp STAR     &mmv MOVE_RIGHT  &kp UNDER  &kp DQT   &kp PIPE  &kp HASH  &kp TILDE &trans
+&trans  &trans    &trans    &trans    &trans    &trans       &mkp LCLK        &trans     &trans    &trans    &trans    &trans
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_2 {
+            display-name = "SYM_RIGHT";
+            bindings = <
+&trans  &trans    &trans    &trans    &trans    &trans       &mmv MOVE_UP     &trans     &trans    &trans    &trans    &trans    &trans
+&trans  &kp EXCL  &kp QMARK &td_lbrc  &kp RBRC  &kp PLUS     &mmv MOVE_DOWN   &kp DLLR   &kp GRAVE &kp PRCNT &kp POUND &kp CARET &trans
+&trans  &td_lt    &td_gt    &td_lpar  &kp RPAR  &kp MINUS    &mmv MOVE_LEFT   &kp EQUAL  &kp APOS  &kp AMPS  &kp AT    &kp COLON &trans
+&trans  &kp BSLH  &kp FSLH  &td_lbkt  &kp RBKT  &kp STAR     &mmv MOVE_RIGHT  &kp UNDER  &kp DQT   &kp PIPE  &kp HASH  &kp TILDE &trans
+&trans  &trans    &trans    &trans    &trans    &trans       &mkp LCLK        &trans     &trans    &trans    &trans    &trans
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+
+        layer_3 {
             display-name = "NAV";
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4          &kp F5             &mmv MOVE_UP     &kp F6       &kp F7    &kp F8    &kp F9     &kp F10           &trans
@@ -163,19 +212,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_2 {
-            display-name = "SYM";
-            bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans       &mmv MOVE_UP     &trans     &trans    &trans    &trans    &trans    &trans
-&trans  &kp EXCL  &kp QMARK &td_lbrc  &kp RBRC  &kp PLUS     &mmv MOVE_DOWN   &kp DLLR   &kp GRAVE &kp PRCNT &kp POUND &kp CARET &trans
-&trans  &td_lt    &td_gt    &td_lpar  &kp RPAR  &kp MINUS    &mmv MOVE_LEFT   &kp EQUAL  &kp APOS  &kp AMPS  &kp AT    &kp COLON &trans
-&trans  &kp BSLH  &kp FSLH  &td_lbkt  &kp RBKT  &kp STAR     &mmv MOVE_RIGHT  &kp UNDER  &kp DQT   &kp PIPE  &kp HASH  &kp TILDE &trans
-&trans  &trans    &trans    &trans    &trans    &trans       &mkp LCLK        &trans     &trans    &trans    &trans    &trans
-            >;
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer_3 {
+        layer_4 {
             display-name = "UTIL";
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6     &kp F7  &kp F8      &kp F9      &kp F10      &trans
