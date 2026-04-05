@@ -177,11 +177,11 @@
         layer0 {
             display-name = "COLEMAK";
             bindings = <
-&kp ESC          &kp N1          &kp N2          &kp N3          &kp N4           &kp N5    &kp UP_ARROW    &kp N6       &kp N7           &kp N8          &kp N9          &kp N0          &kp ESCAPE
-&kp GRAVE        &kp Q           &kp W           &kp F           &kp P            &kp B     &kp DOWN_ARROW  &kp J        &kp L            &kp U           &kp Y           &kp SEMICOLON   &kp MINUS
-&kp LEFT_SHIFT   &hrm LGUI A     &hrm LALT R     &hrm LCTRL S    &hrm LSHIFT T    &kp G     &kp LEFT_ARROW  &kp M        &hrm RSHIFT N    &hrm RCTRL E    &hrm RALT I     &hrm RGUI O     &kp APOS
-&kp LCTRL        &kp Z           &kp X           &kp C           &kp D            &kp V     &kp RIGHT_ARROW &kp K        &kp H            &kp COMMA       &kp DOT         &kp FSLH        &kp BACKSLASH
-&kp C_MUTE       &kp LEFT_ALT    &kp LEFT_GUI    &td_esc_vim     &lt 2 SPACE      &lt 3 TAB &kp ENTER       &lt 4 RETURN &lt 1 BSPC       &caps_word      &trans          &trans
+&trans       &kp N1          &kp N2          &kp N3          &kp N4           &kp N5    &kp UP_ARROW    &kp N6       &kp N7           &kp N8          &kp N9          &kp N0          &trans
+&trans       &kp Q           &kp W           &kp F           &kp P            &kp B     &kp DOWN_ARROW  &kp J        &kp L            &kp U           &kp Y           &kp SEMICOLON   &trans
+&trans       &hrm LGUI A     &hrm LALT R     &hrm LCTRL S    &hrm LSHIFT T    &kp G     &kp LEFT_ARROW  &kp M        &hrm RSHIFT N    &hrm RCTRL E    &hrm RALT I     &hrm RGUI O     &trans
+&trans       &kp Z           &kp X           &kp C           &kp D            &kp V     &kp RIGHT_ARROW &kp K        &kp H            &kp COMMA       &kp DOT         &kp FSLH        &trans
+&kp C_MUTE   &trans          &trans          &td_esc_vim     &lt 2 SPACE      &lt 3 TAB &kp ENTER       &lt 4 RETURN &lt 1 BSPC       &caps_word      &trans          &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
@@ -215,11 +215,12 @@
         layer_3 {
             display-name = "NAV_ARR";
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4          &kp F5             &mmv MOVE_UP     &kp F6       &kp F7    &kp F8    &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP    &kp HOME  &kp UP    &kp END    &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans          &trans          &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT &kp F11 &kp F12  &trans
-&kp C_MUTE  &trans           &trans          &trans          &trans          &trans             &mkp LCLK        &trans       &trans    &trans    &trans     &trans
+&trans      &trans          &trans          &trans          &trans          &trans              &mmv MOVE_UP     &trans          &trans          &trans      &trans          &trans          &trans
+&trans      &trans          &trans          &trans          &trans          &trans              &mmv MOVE_DOWN   &kp PG_UP       &kp HOME        &kp UP      &kp END         &trans          &trans
+&trans      &trans          &trans          &trans          &trans          &trans              &mmv MOVE_LEFT   &kp PG_DN       &kp LEFT        &kp DOWN    &kp RIGHT       &trans          &trans
+&trans      &trans          &trans          &trans          &trans          &trans              &mmv MOVE_RIGHT  &trans          &trans          &trans      &trans          &trans          &trans
+&kp C_MUTE  &trans          &trans          &trans          &trans          &trans              &mkp LCLK        &trans          &trans          &trans      &trans          &trans
+            >;
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -256,6 +257,18 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_7_oldRGB {
+            display-name = "NAV_ARR_old";
+            bindings = <
+&kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4          &kp F5             &mmv MOVE_UP     &kp F6       &kp F7    &kp F8    &kp F9     &kp F10           &trans
+&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP    &kp HOME  &kp UP    &kp END    &kp MINUS         &kp EQUAL
+&trans      &kp TILDE        &trans          &trans          &trans          &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT &kp F11 &kp F12  &trans
+&kp C_MUTE  &trans           &trans          &trans          &trans          &trans             &mkp LCLK        &trans       &trans    &trans    &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
