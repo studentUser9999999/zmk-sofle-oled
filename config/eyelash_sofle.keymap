@@ -1,6 +1,10 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25
 
+#define NO_AE RA(Z) // Right-Alt + Z = æ
+#define NO_O  RA(L) // Right-Alt + L = ø
+#define NO_AA RA(W) // Right-Alt + W = å
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -144,18 +148,26 @@
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
         };
-        // A + R = å
+        // A + R = å (US Intl: Right-Alt + W)
         combo_aa {
             timeout-ms = <50>;
-            key-positions = <27 28>; // Adjust these to match your physical A and R positions
-            bindings = <&aa_macro>;
+            key-positions = <27 28>; 
+            bindings = <&kp NO_AA>; 
         };
 
-        // I + O = ø
+        // I + O = ø (US Intl: Right-Alt + L)
         combo_oo {
             timeout-ms = <50>;
-            key-positions = <36 37>; // Adjust these to match your physical I and O positions
-            bindings = <&oo_macro>;
+            key-positions = <36 37>; 
+            bindings = <&kp NO_O>;
+        };
+
+        // E + N = æ (US Intl: Right-Alt + Z)
+        // Adding Æ since you'll likely need all three
+        combo_ae {
+            timeout-ms = <50>;
+            key-positions = <34 35>; 
+            bindings = <&kp NO_AE>;
         };
     };
 
@@ -201,7 +213,7 @@
 
 
         layer_3 {
-            display-name = "NAV";
+            display-name = "NAV_ARR";
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4          &kp F5             &mmv MOVE_UP     &kp F6       &kp F7    &kp F8    &kp F9     &kp F10           &trans
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP    &kp HOME  &kp UP    &kp END    &kp MINUS         &kp EQUAL
@@ -213,6 +225,18 @@
         };
 
         layer_4 {
+            display-name = "NAV_MOUSE";
+            bindings = <
+&kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4          &kp F5             &mmv MOVE_UP     &kp F6       &kp F7    &kp F8    &kp F9     &kp F10           &trans
+&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP    &kp HOME  &kp UP    &kp END    &kp MINUS         &kp EQUAL
+&trans      &kp TILDE        &trans          &trans          &trans          &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT &kp F11 &kp F12  &trans
+&kp C_MUTE  &trans           &trans          &trans          &trans          &trans             &mkp LCLK        &trans       &trans    &trans    &trans     &trans
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_5 {
             display-name = "UTIL";
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6     &kp F7  &kp F8      &kp F9      &kp F10      &trans
@@ -224,7 +248,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_5 {
+        layer_6 {
             display-name = "EMPTY";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
