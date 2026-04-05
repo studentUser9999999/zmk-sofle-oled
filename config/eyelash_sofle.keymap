@@ -93,6 +93,7 @@
             bindings = <&kp ESC>, <&mm_vim_quit>;
         };
     };
+    
 
     macros {
         arrow_macro: arrow_macro {
@@ -190,11 +191,11 @@
         layer_1 {
             display-name = "SYM_LEFT";
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans       &mmv MOVE_UP     &trans     &trans    &trans    &trans    &trans    &trans
-&trans  &kp EXCL  &kp QMARK &td_lbrc  &kp RBRC  &kp PLUS     &mmv MOVE_DOWN   &kp DLLR   &kp GRAVE &kp PRCNT &kp POUND &kp CARET &trans
-&trans  &td_lt    &td_gt    &td_lpar  &kp RPAR  &kp MINUS    &mmv MOVE_LEFT   &kp EQUAL  &kp APOS  &kp AMPS  &kp AT    &kp COLON &trans
-&trans  &kp BSLH  &kp FSLH  &td_lbkt  &kp RBKT  &kp STAR     &mmv MOVE_RIGHT  &kp UNDER  &kp DQT   &kp PIPE  &kp HASH  &kp TILDE &trans
-&trans  &trans    &trans    &trans    &trans    &trans       &mkp LCLK        &trans     &trans    &trans    &trans    &trans
+&trans  &trans    &trans    &trans    &trans    &trans       &mmv MOVE_UP     &none      &none      &none      &none      &none      &trans
+&trans  &kp EXCL  &kp QMARK &td_lbrc  &kp RBRC  &kp PLUS     &mmv MOVE_DOWN   &none      &none      &none      &none      &none      &trans
+&trans  &td_lt    &td_gt    &td_lpar  &kp RPAR  &kp MINUS    &mmv MOVE_LEFT   &kp RSHIFT &kp RCTRL  &kp RALT   &kp RGUI   &none      &trans
+&trans  &kp BSLH  &kp FSLH  &td_lbkt  &kp RBKT  &kp STAR     &mmv MOVE_RIGHT  &none      &none      &none      &none      &none      &trans
+&trans  &trans    &trans    &trans    &trans    &trans       &mkp LCLK        &trans     &trans     &trans     &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -202,11 +203,11 @@
         layer_2 {
             display-name = "SYM_RIGHT";
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans       &mmv MOVE_UP     &trans     &trans    &trans    &trans    &trans    &trans
-&trans  &kp EXCL  &kp QMARK &td_lbrc  &kp RBRC  &kp PLUS     &mmv MOVE_DOWN   &kp DLLR   &kp GRAVE &kp PRCNT &kp POUND &kp CARET &trans
-&trans  &td_lt    &td_gt    &td_lpar  &kp RPAR  &kp MINUS    &mmv MOVE_LEFT   &kp EQUAL  &kp APOS  &kp AMPS  &kp AT    &kp COLON &trans
-&trans  &kp BSLH  &kp FSLH  &td_lbkt  &kp RBKT  &kp STAR     &mmv MOVE_RIGHT  &kp UNDER  &kp DQT   &kp PIPE  &kp HASH  &kp TILDE &trans
-&trans  &trans    &trans    &trans    &trans    &trans       &mkp LCLK        &trans     &trans    &trans    &trans    &trans
+&trans  &none     &none     &none     &none     &none        &mmv MOVE_UP     &trans     &trans     &trans     &trans     &trans     &trans
+&trans  &none     &none     &none     &none     &none        &mmv MOVE_DOWN   &kp DLLR   &kp GRAVE  &kp PRCNT  &kp POUND  &kp CARET  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL &kp LSHIFT &none       &mmv MOVE_LEFT   &kp EQUAL  &kp APOS   &kp AMPS   &kp AT     &kp COLON  &trans
+&trans  &none     &none     &none     &none     &none        &mmv MOVE_RIGHT  &kp UNDER  &kp DQT    &kp PIPE   &kp HASH   &kp TILDE  &trans
+&trans  &trans    &trans    &trans    &trans    &trans       &mkp LCLK        &trans     &trans     &trans     &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
