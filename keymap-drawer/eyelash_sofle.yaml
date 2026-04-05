@@ -73,11 +73,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -86,11 +86,11 @@ layers:
   - '}'
   - +
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - $
-  - {t: '`', s: '~'}
-  - '%'
-  - '#'
-  - ^
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&td_lt'
@@ -99,11 +99,11 @@ layers:
   - )
   - {t: '-', s: _}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - {t: '=', s: +}
-  - {t: '''', s: '"'}
-  - '&'
-  - '@'
-  - ':'
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - RGUI
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: \, s: '|'}
@@ -112,11 +112,11 @@ layers:
   - {t: ']', s: '}'}
   - '*'
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - _
-  - '"'
-  - '|'
-  - '#'
-  - '~'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -132,11 +132,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   SYM_RIGHT:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -145,11 +145,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '!'
-  - '?'
-  - '&td_lbrc'
-  - '}'
-  - +
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - $
   - {t: '`', s: '~'}
@@ -158,11 +158,11 @@ layers:
   - ^
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&td_lt'
-  - '&td_gt'
-  - '&td_lpar'
-  - )
-  - {t: '-', s: _}
+  - LGUI
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '=', s: +}
   - {t: '''', s: '"'}
@@ -171,11 +171,11 @@ layers:
   - ':'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: \, s: '|'}
-  - {t: /, s: '?'}
-  - '&td_lbkt'
-  - {t: ']', s: '}'}
-  - '*'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - _
   - '"'
