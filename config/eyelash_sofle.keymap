@@ -92,6 +92,24 @@
             tapping-term-ms = <200>;
             bindings = <&kp ESC>, <&mm_vim_quit>;
         };
+        // Numpad Morph Definitions (Normal = Numpad, Shift = Your original Symbol)
+        nm_0: nm_0 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N0>, <&kp EQUAL>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_1: nm_1 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N1>, <&kp DQT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_2: nm_2 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N2>, <&kp PIPE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_3: nm_3 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N3>, <&kp HASH>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_4: nm_4 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N4>, <&kp APOS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_5: nm_5 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N5>, <&kp AMPS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_6: nm_6 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N6>, <&kp AT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_7: nm_7 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N7>, <&kp GRAVE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_8: nm_8 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N8>, <&kp PRCNT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_9: nm_9 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N9>, <&kp POUND>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        
+        // Traditional Numpad Signs (Shifted = secondary symbols)
+        nm_dot: nm_dot { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_DOT>, <&kp UNDER>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_plus: nm_plus { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_PLUS>, <&kp COLON>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_min: nm_min { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_MINUS>, <&kp TILDE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_div: nm_div { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_SLASH>, <&kp CARET>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_mul: nm_mul { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_ASTERISK>, <&kp DLLR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
     };
     
 
@@ -201,13 +219,13 @@
         };
 
         layer_2 {
-            display-name = "SYM_RIGHT";
+            display-name = "NUM_SYM";
             bindings = <
-&trans  &none     &none     &none     &none     &none        &mmv MOVE_UP     &trans     &trans     &trans     &trans     &trans     &trans
-&trans  &none     &none     &none     &none     &none        &mmv MOVE_DOWN   &kp DLLR   &kp GRAVE  &kp PRCNT  &kp POUND  &kp CARET  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL &kp LSHIFT &none       &mmv MOVE_LEFT   &kp EQUAL  &kp APOS   &kp AMPS   &kp AT     &kp COLON  &trans
-&trans  &none     &none     &none     &none     &none        &mmv MOVE_RIGHT  &kp UNDER  &kp DQT    &kp PIPE   &kp HASH   &kp TILDE  &trans
-&trans  &trans    &trans    &trans    &trans    &trans       &mkp LCLK        &trans     &trans     &trans     &trans     &trans
+&trans  &none      &none      &none      &none       &none            &mmv MOVE_UP     &nm_mul    &nm_7      &nm_8      &nm_9      &nm_div    &trans
+&trans  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT  &none            &mmv MOVE_DOWN   &kp COLON  &nm_4      &nm_5      &nm_6      &nm_plus   &trans
+&trans  &none      &none      &none      &none       &none            &mmv MOVE_LEFT   &nm_dot    &nm_1      &nm_2      &nm_3      &nm_min    &trans
+&trans  &none      &none      &none      &none       &none            &mmv MOVE_RIGHT  &none      &kp KP_DOT &kp EQUAL  &kp KP_ENTER &none    &trans
+&trans  &trans     &trans     &trans     &trans      &trans           &mkp LCLK        &trans     &nm_0      &trans     &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -225,17 +243,19 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_4 {
-            display-name = "NAV_MOUSE";
+           layer_4 {
+            display-name = "EMPTY";
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4          &kp F5             &mmv MOVE_UP     &kp F6       &kp F7    &kp F8    &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP    &kp HOME  &kp UP    &kp END    &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans          &trans          &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT &kp F11 &kp F12  &trans
-&kp C_MUTE  &trans           &trans          &trans          &trans          &trans             &mkp LCLK        &trans       &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
+
+    
 
         layer_5 {
             display-name = "UTIL";
@@ -249,17 +269,18 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_6 {
-            display-name = "EMPTY";
+    layer_6 {
+            display-name = "NAV_MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4          &kp F5             &mmv MOVE_UP     &kp F6       &kp F7    &kp F8    &kp F9     &kp F10           &trans
+&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP    &kp HOME  &kp UP    &kp END    &kp MINUS         &kp EQUAL
+&trans      &kp TILDE        &trans          &trans          &trans          &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT &kp F11 &kp F12  &trans
+&kp C_MUTE  &trans           &trans          &trans          &trans          &trans             &mkp LCLK        &trans       &trans    &trans    &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
+     
 
         layer_7_oldRGB {
             display-name = "NAV_ARR_old";
