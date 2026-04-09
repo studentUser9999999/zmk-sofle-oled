@@ -222,8 +222,8 @@
             display-name = "NUM_SYM";
             bindings = <
 &trans  &none      &none      &none      &none       &none            &mmv MOVE_UP     &nm_mul    &none      &none      &none      &nm_div    &trans
-&trans  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT  &none            &mmv MOVE_DOWN   &kp COLON  &nm_7      &nm_8      &nm_9      &nm_plus   &trans
-&trans  &none      &none      &none      &none       &none            &mmv MOVE_LEFT   &nm_dot    &nm_4      &nm_5      &nm_6      &nm_min    &trans
+&trans  &none      &none      &none      &none       &none            &mmv MOVE_DOWN   &kp COLON  &nm_7      &nm_8      &nm_9      &nm_plus   &trans
+&trans  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT  &none            &mmv MOVE_LEFT   &nm_dot    &nm_4      &nm_5      &nm_6      &nm_min    &trans
 &trans  &none      &none      &none      &none       &none            &mmv MOVE_RIGHT  &none      &nm_1      &nm_2      &nm_3 &none    &trans
 &trans  &trans     &trans     &trans     &trans      &trans           &mkp LCLK        &trans     &nm_0      &kp KP_DOT &kp EQUAL  &kp KP_ENTER
             >;
