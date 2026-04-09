@@ -139,9 +139,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: KP ASTERISK, s: $}
-  - {t: '7', s: '`'}
-  - {t: '8', s: '%'}
-  - {t: '9', s: '#'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: KP SLASH, s: ^}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -152,9 +152,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - ':'
-  - {t: '4', s: ''''}
-  - {t: '5', s: '&'}
-  - {t: '6', s: '@'}
+  - {t: '7', s: '`'}
+  - {t: '8', s: '%'}
+  - {t: '9', s: '#'}
   - {t: KP PLUS, s: ':'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -165,9 +165,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: KP DOT, s: _}
-  - {t: '1', s: '"'}
-  - {t: '2', s: '|'}
-  - {t: '3', s: '#'}
+  - {t: '4', s: ''''}
+  - {t: '5', s: '&'}
+  - {t: '6', s: '@'}
   - {t: KP MINUS, s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -178,9 +178,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - KP DOT
-  - {t: '=', s: +}
-  - KP ENTER
+  - {t: '1', s: '"'}
+  - {t: '2', s: '|'}
+  - {t: '3', s: '#'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -192,9 +192,9 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '0', s: '='}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - KP DOT
+  - {t: '=', s: +}
+  - KP ENTER
   NAV_ARR:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
