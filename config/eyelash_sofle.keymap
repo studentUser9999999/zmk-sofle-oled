@@ -221,24 +221,24 @@
         layer_2 {
             display-name = "NUM_SYM";
             bindings = <
-&trans  &none      &none      &none      &none       &none            &mmv MOVE_UP     &nm_mul    &none      &none      &none      &nm_div    &trans
-&trans  &none      &none      &none      &none       &none            &mmv MOVE_DOWN   &kp COLON  &nm_7      &nm_8      &nm_9      &nm_plus   &trans
-&trans  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT  &none            &mmv MOVE_LEFT   &nm_dot    &nm_4      &nm_5      &nm_6      &nm_min    &trans
-&trans  &none      &none      &none      &none       &none            &mmv MOVE_RIGHT  &none      &nm_1      &nm_2      &nm_3 &none    &trans
+&trans  &none      &none      &none      &none       &none            &mmv MOVE_UP     &none    &none      &none      &none      &none       &trans
+&trans  &none      &none      &none      &none       &none            &mmv MOVE_DOWN   &nm_mul   &nm_7      &nm_8      &nm_9      &nm_div     &trans
+&trans  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT  &none            &mmv MOVE_LEFT   &kp COLON    &nm_4      &nm_5      &nm_6      &nm_plus    &trans
+&trans  &none      &none      &none      &none       &none            &mmv MOVE_RIGHT  &nm_dot       &nm_1      &nm_2      &nm_3      &nm_min     &trans
 &trans  &trans     &trans     &trans     &trans      &trans           &mkp LCLK        &trans     &nm_0      &kp KP_DOT &kp EQUAL  &kp KP_ENTER
             >;
             sensor-bindings = <&scroll_encoder>;
         };
 
 
-        layer_3 {
+      layer_3 {
             display-name = "NAV_ARR";
             bindings = <
-&trans      &trans          &trans          &trans          &trans          &trans              &mmv MOVE_UP     &trans          &trans          &trans      &trans          &trans          &trans
-&trans      &trans          &trans          &trans          &trans          &trans              &mmv MOVE_DOWN   &kp PG_UP       &kp HOME        &kp UP      &kp END         &trans          &trans
-&trans      &trans          &trans          &trans          &trans          &trans              &mmv MOVE_LEFT   &kp PG_DN       &kp LEFT        &kp DOWN    &kp RIGHT       &trans          &trans
-&trans      &trans          &trans          &trans          &trans          &trans              &mmv MOVE_RIGHT  &trans          &trans          &trans      &trans          &trans          &trans
-&kp C_MUTE  &trans          &trans          &trans          &trans          &trans              &mkp LCLK        &trans          &trans          &trans      &trans          &trans
+&none        &none      &none      &none      &none      &none                               &mmv MOVE_UP     &none            &none            &none          &none            &none            &none
+&none        &none      &none      &none      &none      &none                               &mmv MOVE_DOWN   &kp PG_UP        &kp HOME         &kp UP         &kp END          &none            &none
+&none        &none      &none      &none      &none      &none                               &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN       &kp RIGHT        &none            &none
+&none        &none      &none      &none      &none      &none                               &mmv MOVE_RIGHT  &kp LC(Z)        &kp LC(X)        &kp LC(C)      &kp LC(V)        &none            &none
+&kp C_MUTE   &none      &none      &none      &none      &none                               &mkp LCLK        &none            &none            &none          &none            &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
