@@ -163,30 +163,31 @@
 
     combos {
         compatible = "zmk,combos";
+        
         combo_softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
         };
-        // A + R = å (US Intl: Right-Alt + W)
+
+        // Q + W = å (Positions 14, 15)
         combo_aa {
             timeout-ms = <50>;
-            key-positions = <27 28>; 
+            key-positions = <14 15>; 
             bindings = <&kp NO_AA>; 
         };
 
-        // I + O = ø (US Intl: Right-Alt + L)
-        combo_oo {
-            timeout-ms = <50>;
-            key-positions = <36 37>; 
-            bindings = <&kp NO_O>;
-        };
-
-        // E + N = æ (US Intl: Right-Alt + Z)
-        // Adding Æ since you'll likely need all three
+        // L + U = æ (Positions 21, 22)
         combo_ae {
             timeout-ms = <50>;
-            key-positions = <34 35>; 
+            key-positions = <21 22>; 
             bindings = <&kp NO_AE>;
+        };
+
+        // U + Y = ø (Positions 22, 23)
+        combo_oo {
+            timeout-ms = <50>;
+            key-positions = <22 23>; 
+            bindings = <&kp NO_O>;
         };
     };
 
@@ -232,16 +233,16 @@
 
 
       layer_3 {
-            display-name = "NAV_ARR";
-            bindings = <
-&none        &none      &none      &none      &none      &none                               &mmv MOVE_UP     &none            &none            &none          &none            &none            &none
-&none        &none      &none      &none      &none      &none                               &mmv MOVE_DOWN   &kp PG_UP        &kp HOME         &kp UP         &kp END          &none            &none
-&none        &none      &none      &none      &none      &none                               &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN       &kp RIGHT        &none            &none
-&none        &none      &none      &none      &none      &none                               &mmv MOVE_RIGHT  &kp LC(Z)        &kp LC(X)        &kp LC(C)      &kp LC(V)        &none            &none
-&kp C_MUTE   &none      &none      &none      &none      &none                               &mkp LCLK        &none            &none            &none          &none            &none
-            >;
-            sensor-bindings = <&scroll_encoder>;
-        };
+    display-name = "NAV_ARR";
+    bindings = <
+&none        &none        &none        &none        &none         &none                               &mmv MOVE_UP     &none            &none            &none            &none           &none            &none
+&none        &none        &none        &none        &none         &none                               &mmv MOVE_DOWN   &kp PG_UP        &kp HOME         &kp UP           &kp END         &none            &none
+&none        &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHIFT    &kp LS(LC(TAB))                     &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN         &kp RIGHT       &none            &none
+&none        &none        &none        &none        &none         &kp LC(TAB)                         &mmv MOVE_RIGHT  &kp LC(Z)        &kp LC(X)        &kp LC(C)        &kp LC(V)       &none            &none
+&kp C_MUTE   &none        &none        &none        &none         &none                               &mkp LCLK        &none            &none            &none            &none           &none
+    >;
+    sensor-bindings = <&scroll_encoder>;
+};
 
            layer_4 {
             display-name = "EMPTY";
