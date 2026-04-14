@@ -645,21 +645,21 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="145" width="28" height="26" class="combo"/>
-<text x="112" y="158" class="combo tap">
+<rect rx="6" ry="6" x="98" y="89" width="28" height="26" class="combo"/>
+<text x="112" y="102" class="combo tap">
 <tspan x="112" dy="-0.6em">AltGr+</tspan><tspan x="112" dy="1.2em">W</tspan>
 </text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="798" y="145" width="28" height="26" class="combo"/>
-<text x="812" y="158" class="combo tap">
-<tspan x="812" dy="-0.6em">AltGr+</tspan><tspan x="812" dy="1.2em">L</tspan>
+<rect rx="6" ry="6" x="686" y="74" width="28" height="26" class="combo"/>
+<text x="700" y="88" class="combo tap">
+<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
-<text x="700" y="144" class="combo tap">
-<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap">
+<tspan x="756" dy="-0.6em">AltGr+</tspan><tspan x="756" dy="1.2em">L</tspan>
 </text>
 </g>
 </g>
@@ -1000,21 +1000,21 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="145" width="28" height="26" class="combo"/>
-<text x="112" y="158" class="combo tap">
+<rect rx="6" ry="6" x="98" y="89" width="28" height="26" class="combo"/>
+<text x="112" y="102" class="combo tap">
 <tspan x="112" dy="-0.6em">AltGr+</tspan><tspan x="112" dy="1.2em">W</tspan>
 </text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="798" y="145" width="28" height="26" class="combo"/>
-<text x="812" y="158" class="combo tap">
-<tspan x="812" dy="-0.6em">AltGr+</tspan><tspan x="812" dy="1.2em">L</tspan>
+<rect rx="6" ry="6" x="686" y="74" width="28" height="26" class="combo"/>
+<text x="700" y="88" class="combo tap">
+<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
-<text x="700" y="144" class="combo tap">
-<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap">
+<tspan x="756" dy="-0.6em">AltGr+</tspan><tspan x="756" dy="1.2em">L</tspan>
 </text>
 </g>
 </g>
@@ -1381,21 +1381,21 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="145" width="28" height="26" class="combo"/>
-<text x="112" y="158" class="combo tap">
+<rect rx="6" ry="6" x="98" y="89" width="28" height="26" class="combo"/>
+<text x="112" y="102" class="combo tap">
 <tspan x="112" dy="-0.6em">AltGr+</tspan><tspan x="112" dy="1.2em">W</tspan>
 </text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="798" y="145" width="28" height="26" class="combo"/>
-<text x="812" y="158" class="combo tap">
-<tspan x="812" dy="-0.6em">AltGr+</tspan><tspan x="812" dy="1.2em">L</tspan>
+<rect rx="6" ry="6" x="686" y="74" width="28" height="26" class="combo"/>
+<text x="700" y="88" class="combo tap">
+<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
-<text x="700" y="144" class="combo tap">
-<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap">
+<tspan x="756" dy="-0.6em">AltGr+</tspan><tspan x="756" dy="1.2em">L</tspan>
 </text>
 </g>
 </g>
@@ -1542,30 +1542,30 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
 <use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(84, 168)" class="key none keypos-27">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(84, 168)" class="key keypos-27">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap">LGUI</text>
 </g>
-<g transform="translate(140, 147)" class="key none keypos-28">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(140, 147)" class="key keypos-28">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-option"/>
 </g>
-<g transform="translate(196, 140)" class="key none keypos-29">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(196, 140)" class="key keypos-29">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-control"/>
 </g>
-<g transform="translate(252, 147)" class="key none keypos-30">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(252, 147)" class="key keypos-30">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-shift"/>
 </g>
-<g transform="translate(308, 147)" class="key none keypos-31">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(308, 147)" class="key keypos-31">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-tab"/>
 </g>
 <g transform="translate(406, 91)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1630,10 +1630,10 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
 <use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(308, 203)" class="key none keypos-44">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-13" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(308, 203)" class="key keypos-44">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-tab"/>
 </g>
 <g transform="translate(518, 91)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1737,21 +1737,21 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="145" width="28" height="26" class="combo"/>
-<text x="112" y="158" class="combo tap">
+<rect rx="6" ry="6" x="98" y="89" width="28" height="26" class="combo"/>
+<text x="112" y="102" class="combo tap">
 <tspan x="112" dy="-0.6em">AltGr+</tspan><tspan x="112" dy="1.2em">W</tspan>
 </text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="798" y="145" width="28" height="26" class="combo"/>
-<text x="812" y="158" class="combo tap">
-<tspan x="812" dy="-0.6em">AltGr+</tspan><tspan x="812" dy="1.2em">L</tspan>
+<rect rx="6" ry="6" x="686" y="74" width="28" height="26" class="combo"/>
+<text x="700" y="88" class="combo tap">
+<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
-<text x="700" y="144" class="combo tap">
-<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap">
+<tspan x="756" dy="-0.6em">AltGr+</tspan><tspan x="756" dy="1.2em">L</tspan>
 </text>
 </g>
 </g>
@@ -2084,21 +2084,21 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="145" width="28" height="26" class="combo"/>
-<text x="112" y="158" class="combo tap">
+<rect rx="6" ry="6" x="98" y="89" width="28" height="26" class="combo"/>
+<text x="112" y="102" class="combo tap">
 <tspan x="112" dy="-0.6em">AltGr+</tspan><tspan x="112" dy="1.2em">W</tspan>
 </text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="798" y="145" width="28" height="26" class="combo"/>
-<text x="812" y="158" class="combo tap">
-<tspan x="812" dy="-0.6em">AltGr+</tspan><tspan x="812" dy="1.2em">L</tspan>
+<rect rx="6" ry="6" x="686" y="74" width="28" height="26" class="combo"/>
+<text x="700" y="88" class="combo tap">
+<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
-<text x="700" y="144" class="combo tap">
-<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap">
+<tspan x="756" dy="-0.6em">AltGr+</tspan><tspan x="756" dy="1.2em">L</tspan>
 </text>
 </g>
 </g>
@@ -2447,21 +2447,21 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="145" width="28" height="26" class="combo"/>
-<text x="112" y="158" class="combo tap">
+<rect rx="6" ry="6" x="98" y="89" width="28" height="26" class="combo"/>
+<text x="112" y="102" class="combo tap">
 <tspan x="112" dy="-0.6em">AltGr+</tspan><tspan x="112" dy="1.2em">W</tspan>
 </text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="798" y="145" width="28" height="26" class="combo"/>
-<text x="812" y="158" class="combo tap">
-<tspan x="812" dy="-0.6em">AltGr+</tspan><tspan x="812" dy="1.2em">L</tspan>
+<rect rx="6" ry="6" x="686" y="74" width="28" height="26" class="combo"/>
+<text x="700" y="88" class="combo tap">
+<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
-<text x="700" y="144" class="combo tap">
-<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap">
+<tspan x="756" dy="-0.6em">AltGr+</tspan><tspan x="756" dy="1.2em">L</tspan>
 </text>
 </g>
 </g>
@@ -2827,21 +2827,21 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="145" width="28" height="26" class="combo"/>
-<text x="112" y="158" class="combo tap">
+<rect rx="6" ry="6" x="98" y="89" width="28" height="26" class="combo"/>
+<text x="112" y="102" class="combo tap">
 <tspan x="112" dy="-0.6em">AltGr+</tspan><tspan x="112" dy="1.2em">W</tspan>
 </text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="798" y="145" width="28" height="26" class="combo"/>
-<text x="812" y="158" class="combo tap">
-<tspan x="812" dy="-0.6em">AltGr+</tspan><tspan x="812" dy="1.2em">L</tspan>
+<rect rx="6" ry="6" x="686" y="74" width="28" height="26" class="combo"/>
+<text x="700" y="88" class="combo tap">
+<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
-<text x="700" y="144" class="combo tap">
-<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap">
+<tspan x="756" dy="-0.6em">AltGr+</tspan><tspan x="756" dy="1.2em">L</tspan>
 </text>
 </g>
 </g>
@@ -3207,21 +3207,21 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="145" width="28" height="26" class="combo"/>
-<text x="112" y="158" class="combo tap">
+<rect rx="6" ry="6" x="98" y="89" width="28" height="26" class="combo"/>
+<text x="112" y="102" class="combo tap">
 <tspan x="112" dy="-0.6em">AltGr+</tspan><tspan x="112" dy="1.2em">W</tspan>
 </text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="798" y="145" width="28" height="26" class="combo"/>
-<text x="812" y="158" class="combo tap">
-<tspan x="812" dy="-0.6em">AltGr+</tspan><tspan x="812" dy="1.2em">L</tspan>
+<rect rx="6" ry="6" x="686" y="74" width="28" height="26" class="combo"/>
+<text x="700" y="88" class="combo tap">
+<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
-<text x="700" y="144" class="combo tap">
-<tspan x="700" dy="-0.6em">AltGr+</tspan><tspan x="700" dy="1.2em">Z</tspan>
+<rect rx="6" ry="6" x="742" y="74" width="28" height="26" class="combo"/>
+<text x="756" y="88" class="combo tap">
+<tspan x="756" dy="-0.6em">AltGr+</tspan><tspan x="756" dy="1.2em">L</tspan>
 </text>
 </g>
 </g>
