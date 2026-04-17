@@ -13,6 +13,11 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <input/processors.dtsi>
 
+/* Fallback for the Left side so it doesn't crash when building */
+/ {
+    vtrackpoint: vtrackpoint { };
+};
+
 /* Mouse Settings */
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
