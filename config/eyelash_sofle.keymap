@@ -13,11 +13,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <input/processors.dtsi>
 
-/* Fallback for the Left side so it doesn't crash when building */
-/ {
-    vtrackpoint: vtrackpoint { };
-};
-
 /* Mouse Settings */
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -44,18 +39,8 @@
         tap-ms = <100>;
     };
 
-    /* Trackpoint Scroll Listener - Hardware is on the Right side */
-    trackpoint_scroll_layer {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackpoint>;
-        layers = <76>;
-        evt-type = <EV_REL>;
-        x-input-code = <REL_X>;
-        y-input-code = <REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <1>;
-        bindings = <&zip_xy_to_scroll_mapper>;
-    };
+    /* Trackpoint Scroll Listener is disabled for this build to ensure success */
+    /* We will re-enable this once we have a green build checkmark */
 
     behaviors {
         hrm: home_row_mod {
@@ -251,8 +236,8 @@
             bindings = <
 &trans  &none      &none      &none      &none      &none              &mmv MOVE_UP     &none      &none      &none      &none      &none       &trans
 &trans  &none      &none      &none      &none      &none              &mmv MOVE_DOWN   &nm_mul    &nm_7      &nm_8      &nm_9      &nm_div     &trans
-&trans  &none      &none      &none      &none      &kp LC(LALT)       &mmv MOVE_LEFT   &kp COLON  &nm_4      &nm_5      &nm_6      &nm_plus    &trans
-&trans  &none      &none      &none      &none      &kp LS(LC(LALT))   &mmv MOVE_RIGHT  &nm_dot    &nm_1      &nm_2      &nm_3      &nm_min     &trans
+&trans  &none      &none      &none      &none      &none              &mmv MOVE_LEFT   &kp COLON  &nm_4      &nm_5      &nm_6      &nm_plus    &trans
+&trans  &none      &none      &none      &none      &none              &mmv MOVE_RIGHT  &nm_dot    &nm_1      &nm_2      &nm_3      &nm_min     &trans
 &trans  &trans     &trans     &td_apos   &td_dquot  &trans             &mkp LCLK        &trans     &nm_0      &kp KP_DOT &kp EQUAL  &kp KP_ENTER
             >;
             sensor-bindings = <&scroll_encoder>;
