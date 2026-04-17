@@ -1,9 +1,9 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25
 
-#define NO_AE RA(Z) // Right-Alt + Z = æ
-#define NO_O  RA(L) // Right-Alt + L = ø
-#define NO_AA RA(W) // Right-Alt + W = å
+#define NO_AE RA(Z)
+#define NO_O  RA(L)
+#define NO_AA RA(W)
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -24,15 +24,14 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <150>; // Reach top speed faster
-    acceleration-exponent = <2>;  // Adds a "curve" so small nudges are slow, big pushes are fast
-    trigger-period-ms = <8>;      // Smoother polling
+    time-to-max-speed-ms = <150>;
+    acceleration-exponent = <2>;
+    trigger-period-ms = <8>;
 };
 
 &soft_off { hold-time-ms = <2000>; };
 
 / {
-    /* Encoder Definition */
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -40,10 +39,11 @@
         tap-ms = <100>;
     };
 
+    /* Trackpoint Scroll Listener - Hardware is on the Right side */
     trackpoint_scroll_layer {
         compatible = "zmk,input-behavior-listener";
-        device = <&vtrackpoint>; 
-        layers = <8>; // This enables it for layers 2, 3, and 6
+        device = <&vtrackpoint>;
+        layers = <76>;
         evt-type = <EV_REL>;
         x-input-code = <REL_X>;
         y-input-code = <REL_Y>;
@@ -116,7 +116,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp ESC>, <&mm_vim_quit>;
         };
-        // Numpad Morph Definitions (Normal = Numpad, Shift = Your original Symbol)
         nm_0: nm_0 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N0>, <&kp EQUAL>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_1: nm_1 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N1>, <&kp DQT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_2: nm_2 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N2>, <&kp PIPE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
@@ -127,17 +126,12 @@
         nm_7: nm_7 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N7>, <&kp GRAVE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_8: nm_8 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N8>, <&kp PRCNT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_9: nm_9 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N9>, <&kp POUND>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        
-        // Traditional Numpad Signs (Shifted = secondary symbols)
         nm_dot: nm_dot { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_DOT>, <&kp UNDER>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_plus: nm_plus { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_PLUS>, <&kp COLON>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_min: nm_min { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_MINUS>, <&kp TILDE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_div: nm_div { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_SLASH>, <&kp CARET>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_mul: nm_mul { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp KP_ASTERISK>, <&kp DLLR>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-
-        
     };
-    
 
     macros {
         arrow_macro: arrow_macro {
@@ -188,38 +182,31 @@
         aa_macro: aa_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBKT>; // This is the [ key, which is Å in NO layout
+            bindings = <&kp LBKT>;
         };
         oo_macro: oo_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SEMI>; // This is the ; key, which is Ø in NO layout
+            bindings = <&kp SEMI>;
         };
     };
 
     combos {
         compatible = "zmk,combos";
-        
         combo_softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
         };
-
-        // W + F = å (Positions 14, 15)
         combo_aa {
             timeout-ms = <50>;
             key-positions = <15 16>; 
             bindings = <&kp NO_AA>; 
         };
-
-        // L + U = æ (Positions 21, 22)
         combo_ae {
             timeout-ms = <50>;
             key-positions = <21 22>; 
             bindings = <&kp NO_AE>;
         };
-
-        // U + Y = ø (Positions 22, 23)
         combo_oo {
             bindings = <&kp NO_O>;
             timeout-ms = <50>;
@@ -242,45 +229,43 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
-
         layer_1 {
-    display-name = "SYM_LEFT";
-    bindings = <
+            display-name = "SYM_LEFT";
+            bindings = <
 &trans  &trans     &trans    &trans    &trans     &trans       &mmv MOVE_UP     &none      &none      &none      &none      &none      &trans
 &trans  &kp EXCL   &kp QMARK &td_lbrc  &kp RBRC   &kp PLUS     &mmv MOVE_DOWN   &none      &none      &none      &none      &none      &trans
 &trans  &td_lt     &td_gt    &td_lpar  &kp RPAR   &kp MINUS    &mmv MOVE_LEFT   &kp RSHIFT &kp RCTRL  &kp RALT   &kp RGUI   &none      &trans
 &trans  &kp BSLH   &kp FSLH  &td_lbkt  &kp RBKT   &kp STAR     &mmv MOVE_RIGHT  &none      &none      &none      &none      &none      &trans
 &trans  &trans     &trans    &td_apos  &td_dquot  &trans       &mkp LCLK        &trans     &trans     &trans     &trans     &trans
-    >;
-    sensor-bindings = <&scroll_encoder>;
-};
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
 
-       layer_2 {
-    display-name = "NUM_SYM";
-    bindings = <
-&trans  &none      &none      &none      &none      &none             &mmv MOVE_UP     &none      &none      &none      &none      &none       &trans
-&trans  &none      &none      &none      &none      &none             &mmv MOVE_DOWN   &nm_mul    &nm_7      &nm_8      &nm_9      &nm_div     &trans
-&trans  &none      &none      &none      &none      &kp LC(LALT)      &mmv MOVE_LEFT   &kp COLON  &nm_4      &nm_5      &nm_6      &nm_plus    &trans
-&trans  &none      &none      &none      &none      &kp LS(LC(LALT))    &mmv MOVE_RIGHT  &nm_dot    &nm_1      &nm_2      &nm_3      &nm_min     &trans
-&trans  &trans     &trans     &td_apos   &td_dquot  &trans            &mkp LCLK        &trans     &nm_0      &kp KP_DOT &kp EQUAL  &kp KP_ENTER
-    >;
-    sensor-bindings = <&scroll_encoder>;
-};
+        layer_2 {
+            display-name = "NUM_SYM";
+            bindings = <
+&trans  &none      &none      &none      &none      &none              &mmv MOVE_UP     &none      &none      &none      &none      &none       &trans
+&trans  &none      &none      &none      &none      &none              &mmv MOVE_DOWN   &nm_mul    &nm_7      &nm_8      &nm_9      &nm_div     &trans
+&trans  &none      &none      &none      &none      &kp LC(LALT)       &mmv MOVE_LEFT   &kp COLON  &nm_4      &nm_5      &nm_6      &nm_plus    &trans
+&trans  &none      &none      &none      &none      &kp LS(LC(LALT))   &mmv MOVE_RIGHT  &nm_dot    &nm_1      &nm_2      &nm_3      &nm_min     &trans
+&trans  &trans     &trans     &td_apos   &td_dquot  &trans             &mkp LCLK        &trans     &nm_0      &kp KP_DOT &kp EQUAL  &kp KP_ENTER
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
 
-
-      layer_3 {
-    display-name = "NAV_ARR";
-    bindings = <
+        layer_3 {
+            display-name = "NAV_ARR";
+            bindings = <
 &none        &none        &none        &none        &none         &none                               &mmv MOVE_UP     &none            &none            &none            &none           &none            &none
 &none        &none        &none        &none        &none         &none                               &mmv MOVE_DOWN   &kp PG_UP        &kp HOME         &kp UP           &kp END         &none            &none
 &none        &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHIFT    &kp LS(LC(TAB))                     &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN         &kp RIGHT       &none            &none
-&none        &none        &none        &none        &none         &kp LC(TAB)                         &mmv MOVE_RIGHT  &kp LC(Z)        &kp LC(X)        &kp LC(C)        &kp LC(V)       &none            &none
+&none        &none        &none        &none        &none         &kp LC(TAB)                         &mmv MOVE_RIGHT  &kp LC(P)        &kp LC(X)        &kp LC(C)        &kp LC(V)       &none            &none
 &kp C_MUTE   &none        &none        &none        &none         &none                               &mkp LCLK        &none            &none            &none            &none           &none
-    >;
-    sensor-bindings = <&scroll_encoder>;
-};
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
 
-           layer_4 {
+        layer_4 {
             display-name = "EMPTY";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -292,13 +277,11 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-    
-
         layer_5 {
             display-name = "UTIL";
             bindings = <
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6     &kp F7  &kp F8      &kp F9      &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans     &trans  &kp F11     &kp F12     &kp UNDER    &kp PLUS
+&trans     &bt BT_CLR     &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans     &trans  &kp F11     &kp F12     &kp UNDER    &kp PLUS
 &trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans     &trans  &trans      &trans      &kp LBRC     &kp RBRC
 &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans     &trans  &sys_reset  &soft_off   &bootloader  &trans
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans     &trans  &trans      &trans      &trans
@@ -306,25 +289,24 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-    layer_6 {
+        layer_6 {
             display-name = "NAV_MOUSE";
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4          &kp F5             &mmv MOVE_UP     &kp F6       &kp F7    &kp F8    &kp F9     &kp F10           &trans
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP    &kp HOME  &kp UP    &kp END    &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans          &trans          &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &kp TILDE        &trans          &trans          &trans          &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBKT          &kp RBKT
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT &kp F11 &kp F12  &trans
 &kp C_MUTE  &trans           &trans          &trans          &trans          &trans             &mkp LCLK        &trans       &trans    &trans    &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
-     
 
         layer_7_oldRGB {
             display-name = "NAV_ARR_old";
             bindings = <
 &kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4          &kp F5             &mmv MOVE_UP     &kp F6       &kp F7    &kp F8    &kp F9     &kp F10           &trans
 &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP    &kp HOME  &kp UP    &kp END    &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans          &trans          &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &kp TILDE        &trans          &trans          &trans          &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LBKT          &kp RBKT
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT &kp F11 &kp F12  &trans
 &kp C_MUTE  &trans           &trans          &trans          &trans          &trans             &mkp LCLK        &trans       &trans    &trans    &trans     &trans
             >;
