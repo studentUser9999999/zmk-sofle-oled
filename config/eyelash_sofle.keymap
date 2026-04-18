@@ -24,7 +24,7 @@
 };
 
 &mmv {
-    time-to-max-speed-ms = <150>;
+    time-to-max-speed-ms = <300>;
     acceleration-exponent = <2>;
     trigger-period-ms = <8>;
 };
@@ -37,6 +37,13 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         tap-ms = <100>;
+    };
+
+    rgb_encoder: rgb_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        tap-ms = <30>; // Lower ms makes it feel more responsive for lighting
     };
 
     /* Trackpoint Scroll Listener is disabled for this build to ensure success */
@@ -107,10 +114,20 @@
             bindings = <&kp ESC>, <&mm_vim_quit>;
         };
         nm_0: nm_0 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N0>, <&kp EQUAL>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        nm_1: nm_1 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N1>, <&kp DQT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_1: nm_1 { 
+            compatible = "zmk,behavior-mod-morph"; 
+            #binding-cells = <0>; 
+            bindings = <&kp N1>, <&td_dquot>; 
+            mods = <(MOD_LSFT|MOD_RSFT)>; 
+        };
         nm_2: nm_2 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N2>, <&kp PIPE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_3: nm_3 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N3>, <&kp HASH>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        nm_4: nm_4 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N4>, <&kp APOS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        nm_4: nm_4 { 
+            compatible = "zmk,behavior-mod-morph"; 
+            #binding-cells = <0>; 
+            bindings = <&kp N4>, <&td_apos>; 
+            mods = <(MOD_LSFT|MOD_RSFT)>; 
+        };
         nm_5: nm_5 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N5>, <&kp AMPS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_6: nm_6 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N6>, <&kp AT>; mods = <(MOD_LSFT|MOD_RSFT)>; };
         nm_7: nm_7 { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&kp N7>, <&kp GRAVE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
@@ -178,6 +195,17 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SEMI>;
+        };
+        alt_tab_next: alt_tab_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>;
+        };
+
+        alt_tab_prev: alt_tab_prev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp LS(TAB)>, <&macro_release &kp LALT>;
         };
     };
 
@@ -247,24 +275,24 @@
             display-name = "NAV_ARR";
             bindings = <
 &none        &none        &none        &none        &none         &none                               &mmv MOVE_UP     &none            &none            &none            &none           &none            &none
-&none        &none        &none        &none        &none         &none                               &mmv MOVE_DOWN   &kp PG_UP        &kp HOME         &kp UP           &kp END         &none            &none
+&none        &none        &alt_tab_prev &alt_tab_next        &none         &none                               &mmv MOVE_DOWN   &kp PG_UP        &kp HOME         &kp UP           &kp END         &none            &none
 &none        &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHIFT    &kp LS(LC(TAB))                     &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN         &kp RIGHT       &none            &none
-&none        &none        &none        &none        &none         &kp LC(TAB)                         &mmv MOVE_RIGHT  &kp LC(P)        &kp LC(X)        &kp LC(C)        &kp LC(V)       &none            &none
+&none        &none        &none        &none        &none         &kp LC(TAB)                         &mmv MOVE_RIGHT  &kp LC(Z)        &kp LC(X)        &kp LC(C)        &kp LC(V)       &none            &none
 &kp C_MUTE   &none        &none        &none        &none         &none                               &mkp LCLK        &none            &none            &none            &none           &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
 
         layer_4 {
-            display-name = "EMPTY";
+            display-name = "BT_FN";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_EFF  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_BRI  &trans  &kp F4  &kp F5  &kp F6  &kp F11    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_BRD  &trans  &kp F7  &kp F8  &kp F9  &kp F12    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_TOG  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
         };
 
         layer_5 {
