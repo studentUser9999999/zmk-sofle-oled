@@ -89,11 +89,17 @@
             tapping-term-ms = <200>;
             bindings = <&kp LT>, <&angles_inside>;
         };
-        td_apos: td_apos {
-            compatible = "zmk,behavior-tap-dance";
+    
+       apos_single: apos_single {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp APOS>, <&apos_inside>;
+            bindings = <&macro_release &kp LSHIFT>, <&macro_release &kp RSHIFT>, <&macro_tap &kp APOS>;
+        };
+
+        td_apos: td_apos {
+            compatible = "zmk,behaviour-macro";
+            #binding-cells = <200>;
+            bindings = <&apos_single>, <&apos_inside>;
         };
         td_dquot: td_dquot {
             compatible = "zmk,behavior-tap-dance";
@@ -242,7 +248,7 @@
 &trans       &kp Q           &kp W           &kp F           &kp P            &kp B     &kp DOWN_ARROW  &kp J        &kp L            &kp U           &kp Y           &kp SEMICOLON   &trans
 &trans       &hrm LGUI A     &hrm LALT R     &hrm LCTRL S    &hrm LSHIFT T    &kp G     &kp LEFT_ARROW  &kp M        &hrm RSHIFT N    &hrm RCTRL E    &hrm RALT I     &hrm RGUI O     &trans
 &trans       &kp Z           &kp X           &kp C           &kp D            &kp V     &kp RIGHT_ARROW &kp K        &kp H            &kp COMMA       &kp DOT         &kp FSLH        &trans
-&kp C_MUTE   &trans          &trans          &td_esc_vim     &lt 2 SPACE      &lt 3 TAB &kp ENTER       &lt 4 RETURN &lt 1 BSPC       &caps_word      &trans          &trans
+&kp C_MUTE   &trans          &trans          &td_esc_vim     &lt 2 SPACE      &lt 3 TAB &kp ENTER       &lt 4 RETURN &lt 1 BSPC       &kp DEL          &caps_word          &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
