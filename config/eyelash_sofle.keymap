@@ -97,7 +97,7 @@
         };
 
         td_apos: td_apos {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&apos_single>, <&apos_inside>;
