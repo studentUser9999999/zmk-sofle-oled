@@ -97,8 +97,9 @@
         };
 
         td_apos: td_apos {
-            compatible = "zmk,behaviour-macro";
-            #binding-cells = <200>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&apos_single>, <&apos_inside>;
         };
         td_dquot: td_dquot {
