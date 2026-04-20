@@ -62,8 +62,8 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: RETURN, h: BT_FN}
   - {t: '$$mdi:backspace$$', h: SYM_LEFT}
+  - $$mdi:backspace-reverse-outline$$
   - $$mdi:alpha-w-box$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYM_LEFT:
   - {t: '$$mdi:transfer$$', type: trans}
