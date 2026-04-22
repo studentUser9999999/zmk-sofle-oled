@@ -176,12 +176,12 @@
         apos_inside: apos_inside {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp APOS>, <&kp APOS>, <&kp LEFT>;
+            bindings = <&macro_release &kp LSHIFT>, <&macro_release &kp RSHIFT>, <&macro_tap &kp APOS &kp APOS &kp LEFT>;
         };
         dquot_inside: dquot_inside {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
+            bindings = <&macro_release &kp LSHIFT>, <&macro_release &kp RSHIFT>, <&macro_tap &kp DQT &kp DQT &kp LEFT>;
         };
         vim_save_quit: vim_save_quit {
             compatible = "zmk,behavior-macro";
